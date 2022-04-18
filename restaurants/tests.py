@@ -3,7 +3,7 @@ from django.urls import reverse
 
 class RestaurantViewTestCase(TestCase):
     def test_view_output(self):
-        url = reverse("hello-world")
+        url = "/hello-world/"
         response = self.client.get(url)
         self.assertIn("Hello World!", response.context['msg'])
         self.assertContains(response, "Hello World!")
